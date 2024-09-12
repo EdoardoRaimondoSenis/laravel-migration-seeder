@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [PageController::class, 'index']);
+
 Route::get('/', function () {
     $title = 'Layout base - HOME';
     return view('home', compact('title'));
@@ -25,3 +28,8 @@ Route::get('/chi-siamo', function () {
 Route::get('/contatti', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::get('/lista-treni', function () {
+    return view('trainsList');
+})->name('trainsList');
+

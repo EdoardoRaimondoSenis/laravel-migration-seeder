@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container my-5">
-    <h1>CONTACTS IN WEB.PHP</h1>
+    <h1>CONTACTS</h1>
 </div>
 
 @endsection
