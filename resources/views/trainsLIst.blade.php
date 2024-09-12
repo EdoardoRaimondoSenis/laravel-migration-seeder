@@ -34,10 +34,15 @@
         <tbody>
           @foreach ($trains as $train)
           <tr>
-              <th scope="row"></th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">{{ $train->company }}</th>
+              <td>{{ $train->departure_station }}</td>
+              <td>{{ $train->arrival_station }}</td>
+              <td>{{ $train->departure_time }}</td>
+              <td>{{ $train->arrival_time }}</td>
+              <td>{{ $train->train_code }}</td>
+              <td>{{ $train->number_of_carriages }}</td>
+              <td>{{ $train->in_time }}</td>
+              <td>{{ $train->cancelled }}</td>
           </tr>
           @endforeach 
         </tbody>

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']);
+
 
 Route::get('/', function () {
     $title = 'Layout base - HOME';
@@ -29,7 +29,5 @@ Route::get('/contatti', function () {
     return view('contacts');
 })->name('contacts');
 
-Route::get('/lista-treni', function () {
-    return view('trainsList');
-})->name('trainsList');
+Route::get('/lista-treni', [PageController::class, 'index'])->name('trainsList');
 
